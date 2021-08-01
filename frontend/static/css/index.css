@@ -1,0 +1,147 @@
+#app{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#chat{
+    height: 720px;
+    width: 1200px;
+    background-color:#bbddf2;
+    padding: 10px;
+    padding-top: 30px;
+}
+body{
+    background: linear-gradient(45deg,#6ab6e6 30%,#95c2de 90%);
+}
+#message{
+    width: 1040px;
+}
+#message_container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 1100px;
+    height: 600px;
+    border: 2px solid grey;
+    overflow: auto;
+    font-size: 20px;
+    background-color: #c3d5e8;
+}
+#send_message{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.old_message{
+    max-width: 275px;
+    padding: 10px;
+    border: 1px solid grey;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: fit-content;
+    float: left;
+    margin-left: 5px;
+    background-color: #cadbe6;
+}
+.old_message_right{
+    max-width: 275px;
+    padding: 10px;
+    border: 1px solid grey;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: fit-content;
+    float: right;
+    margin-right: 5px;
+    background-color: #cadbe6;
+}
+#join_room{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.username_label{
+    max-width: 70px;
+    float: left;
+    margin-left: 10px;
+    font-size: 15px;
+    margin-top: 22px;
+}
+.username_label_right{
+    max-width: 70px;
+    float: right;
+    margin-right: 10px;
+    font-size: 15px;
+    margin-top: 22px;
+}
+.old_message_container{
+    max-width: 500px;
+}
+.old_message_container_right{
+    max-width: 500px;
+    margin-left: 585px;
+}
+#user_list{
+    margin-left: -1430px;
+    max-width: 70px;
+}
+.room{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 10px;
+    background-color:#bbddf2;
+    font-size: 20px;
+    margin: 10px;
+    height: 200px;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#room_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#error{
+    margin-bottom: -130px;
+}
+.fill{
+    height: 0px;
+    background: grey;
+    border-radius: 10px;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.pointer{
+    cursor: pointer;
+}
+.delete_message{
+    float:left;
+    margin-top: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.delete_message_right{
+    float:right;
+    margin-top: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.date{
+    font-size: 10px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 5px;
+}
+.date_right{
+    font-size: 10px;
+    float: right;
+    margin-top: 25px;
+    margin-right: 5px;
+}
