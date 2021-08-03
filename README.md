@@ -11,32 +11,30 @@ I did this chat application to teach myself how to do a fullstack project and to
 
 First, login 
 
-
-![alt text](https://github.com/G0MMY/chat-app/images/login.jpg?raw=true)
+![GitHub Logo](/images/login.png)
 
 
 If you don't have an account, create one
 
 
-![alt text](https://github.com/G0MMY/chat-app/images/create_user.jpg?raw=true)
+![GitHub Logo](/images/create_user.png)
 
 
 Then, you will be in the user room. You can then enter one of your rooms, join an existing room or create a new room
 
 
-![alt text](https://github.com/G0MMY/chat-app/images/user_room.jpg?raw=true)
+![GitHub Logo](/images/user_room.png)
 
 
 If you go in a chat room, you can then send message to other users
 
 
-![alt text](https://github.com/G0MMY/chat-app/images/chat_room.jpg?raw=true)
+![GitHub Logo](/images/chat_room.png)
 
 
 If you want to create a room, only enter the name of it
 
-
-![alt text](https://github.com/G0MMY/chat-app/images/create_room.jpg?raw=true)
+![GitHub Logo](/images/create_room.png)
 
 
 ## Installation
@@ -44,5 +42,5 @@ If you want to create a room, only enter the name of it
 
 You will need React, Python, Material-ui, Django, Node.js and Docker to try this app
 
-After the download of all the files, go in your terminal into the general chat_app directory (the one who contains all the code). Then, run 'sudo docker run -p 6379:6379 -d redis:5' to start your docker image. After that, run 'python manage.py runserver' to start the localhost. Then, go in frontend and run 'npm run dev', to start the frontend server with react. You should now be good to go.
+After the download of all the files, go in your terminal in the general chat_app directory (the one who contains all the code). Then, run 'sudo docker run -p 6379:6379 -d redis:5', to start your docker image. After that, run 'python manage.py runserver', to start the localhost. Then, go in frontend and run 'npm run dev', to start the frontend server with react. You should now be good to go.
 
