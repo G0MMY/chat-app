@@ -6,7 +6,6 @@ import Login from "./Login";
 import CreateUser from "./CreateUser";
 import UserRooms from "./UserRooms";
 
-//sudo docker run -p 6379:6379 -d redis:5
 
 export default function HomePage(){
     return(

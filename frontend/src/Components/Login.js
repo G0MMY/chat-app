@@ -32,7 +32,7 @@ export default function Login(props){
         } else if (user.password === ""){
             setPasswordValid(true)
         } else {
-            let token = document.cookie.split("=")
+            const token = document.cookie.split("=")
             const requestOptions = {
                 method: "POST",
                 headers: { 
