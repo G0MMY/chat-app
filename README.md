@@ -42,7 +42,7 @@ If you want to create a room, only enter it’s name
 ## Installation
 
 
-You will need React, Python, Material-ui, Django, Node.js and Docker to try this app
+You will need React, Python, Material-ui, Django and Docker to try this app
 
 After the download of all the files, go in your terminal in the general directory (the one who contains all the code). Run 'sudo docker run -p 6379:6379 -d redis:5', to start your docker image. Run 'python manage.py runserver', to start the localhost. Go in frontend and run 'npm run dev', to start the frontend server with react. You should now be good to go. 
 
