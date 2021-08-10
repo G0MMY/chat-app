@@ -9,7 +9,7 @@ My objective while doing this application was to teach myself how to do a full s
 
 ## Try it
 
-Go on http://184.161.7.138:8000 to see and intercat with the application. It may not work if my internet is down or if I have no more power in my house.
+Go on http://184.161.7.138:8000 to interact with the application. It may not work if my internet is down or if I have no more power in my house.
 
 
 ## How does it work
