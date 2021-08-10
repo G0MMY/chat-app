@@ -7,6 +7,11 @@ This web-based chat application allows different users to send messages between 
 My objective while doing this application was to teach myself how to do a full stack project and to understand how channels works. It made me learn a lot about Django and, mostly, about the implementation of the backend of a web application. 
 
 
+## Try it
+
+Go on http://184.161.7.138:8000 to see and intercat with the application. It may not work if my internet is down or if I have no more power in my house.
+
+
 ## How does it work
 
 
