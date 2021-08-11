@@ -6,12 +6,6 @@ from rest_framework.response import Response
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 
-
-# Create your views here.
-class ChatRoomView(generics.ListAPIView):
-    queryset = ChatRoom.objects.all()
-    serializer_class = ChatRoomSerializer
-
 class CreateChatRoomView(APIView):
     serializer_class = CreateChatRoomSerializer
 

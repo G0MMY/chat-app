@@ -1,9 +1,8 @@
-from .views import ChatRoomView, CreateChatRoomView, CreateRoomMessagesView, CreateUserView, DeleteChatRoomView, DeleteRoomMessagesView, RoomMessagesView, UserAuthView, UserLogoutView, UserRoomsLinkView, UserRoomsView, UserView
+from .views import CreateChatRoomView, CreateRoomMessagesView, CreateUserView, DeleteChatRoomView, DeleteRoomMessagesView, RoomMessagesView, UserAuthView, UserLogoutView, UserRoomsLinkView, UserRoomsView, UserView
 from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    path('room', ChatRoomView.as_view()),
     path('create-room', CreateChatRoomView.as_view()),
     path('create-user', CreateUserView.as_view()),
     path('user', UserView.as_view()),
