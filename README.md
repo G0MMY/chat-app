@@ -1,7 +1,7 @@
 # Chat App
 
 
-This web-based chat application allows different users to send messages between themselves. Each user can create a chat room, join one and have multiple rooms. This project runs on localhost and uses docker for the chatting channels. I am currently building a mobile app and a personal server so different devices can talk together.  
+This web-based chat application allows different users to send messages between themselves. Each user can create a chat room, join one and have multiple rooms. I am currently building a mobile app to go with this web app.  
 
 
 My objective while doing this application was to teach myself how to do a full stack project and to understand how channels works. It made me learn a lot about Django and, mostly, about the implementation of the backend of a web application. 
@@ -9,7 +9,7 @@ My objective while doing this application was to teach myself how to do a full s
 
 ## Try it
 
-Go on http://184.161.7.138:8000 to interact with the application. It may not work if my internet is down or if I have no more power in my house.
+Follow http://184.161.7.138:8000 to interact with the application. It may not work if my internet is down or if I have no more power in my house.
 
 
 ## How does it work
