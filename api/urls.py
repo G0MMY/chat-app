@@ -1,4 +1,4 @@
-from .views import CreateChatRoomView, CreateRoomMessagesView, CreateUserView, DeleteChatRoomView, DeleteRoomMessagesView, RoomMessagesView, UserAuthView, UserLogoutView, UserRoomsLinkView, UserRoomsView, UserView
+from .views import CreateChatRoomView, CreateRoomMessagesView, CreateUserView, DeleteChatRoomView, DeleteRoomMessagesView, GetCSRFToken, RoomMessagesView, UserAuthView, UserLoginView, UserLogoutView, UserRoomsLinkView, UserRoomsView, UserView
 from django.contrib import admin
 from django.urls import path
 
@@ -7,6 +7,7 @@ urlpatterns = [
     path('create-user', CreateUserView.as_view()),
     path('user', UserView.as_view()),
     path('user-auth', UserAuthView.as_view()),
+    path('user-login', UserLoginView.as_view()),
     path('user-logout', UserLogoutView.as_view()),
     path('user-rooms', UserRoomsView.as_view()),
     path('user-rooms/link', UserRoomsLinkView.as_view()),
@@ -14,4 +15,5 @@ urlpatterns = [
     path('create-message', CreateRoomMessagesView.as_view()),
     path('delete-message', DeleteRoomMessagesView.as_view()),
     path('delete-room', DeleteChatRoomView.as_view()),
+    path('csrf-token', GetCSRFToken.as_view()),
 ]

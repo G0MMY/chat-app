@@ -1,3 +1,4 @@
+from django.http.response import JsonResponse
 from api.serializers import ChatRoomSerializer, CreateChatRoomSerializer, RoomMessagesSerializer, UserAuthSerializer, UsernameSerializer, UserRoomsSerializer, UserSerializer
 from api.models import ChatRoom, UserRooms, RoomMessages
 from rest_framework import generics, status
@@ -5,6 +6,20 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+import string
+import random
+
+class GetCSRFToken(APIView):
+     
+    def get(self, request, format=None):
+        if not self.request.session.exists(self.request.session.session_key):
+            self.request.session.create()
+
+        letter = string.ascii_uppercase
+        token = ''.join(random.choice(letter) for i in range(32))
+
+        return JsonResponse({'token':token})
+        
 
 class CreateChatRoomView(APIView):
     serializer_class = CreateChatRoomSerializer
@@ -113,11 +128,10 @@ class UserAuthView(APIView):
         username = request.data.get('username')
         password = request.data.get('password')    
         user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return Response(UserAuthSerializer(user).data, status=status.HTTP_202_ACCEPTED)
+        if user is None:
+            return Response({'Not authorized': 'No user associated'}, status=status.HTTP_401_UNAUTHORIZED)
 
-        return Response({'Not authorized': 'No user associated'}, status=status.HTTP_401_UNAUTHORIZED)
+        return Response(UserAuthSerializer(user).data, status=status.HTTP_202_ACCEPTED)
 
 
 class UserLogoutView(APIView):
@@ -137,17 +151,19 @@ class UserLogoutView(APIView):
         return Response({'Bad Request': 'Bad user input'}, status=status.HTTP_400_BAD_REQUEST)
 
 class UserLoginView(APIView):
+    
     serializer_class = UserAuthSerializer
 
     def post(self, request, format=None):
         if not self.request.session.exists(self.request.session.session_key):
             self.request.session.create()
 
-        queryset = User.objects.filter(username=request.data.get('username'))
-        if queryset.exists():
-            user = queryset[0]
-            if not user.is_authenticated:
-                login(request, user)
+        username = request.data.get('username')
+        password = request.data.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            print(self.request.session.items())
             return Response({'Success': 'User logged in'}, status=status.HTTP_200_OK)
 
         return Response({'Not authorized': 'User not found'}, status=status.HTTP_401_UNAUTHORIZED)
