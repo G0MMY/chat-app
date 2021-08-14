@@ -75,7 +75,7 @@ export default function CreateUser(props){
             }
             fetch('/api/create-user', requestOptions).then((response)=>{
                 if (response.ok){
-                    return 
+                    return response.json()
                 }
                 setOpenError(true)
                 document.body.addEventListener('click', ()=>{
