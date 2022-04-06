@@ -9,6 +9,8 @@ My objective while doing this application was to teach myself how to do a full s
 
 ## Installation
 
+Dependencies: npm, docker, django, restframework, python channels
+
 * Download the source code
 * Run sudo docker run -p 6379:6379 -d redis:5
 * Run python manage.py runserver
